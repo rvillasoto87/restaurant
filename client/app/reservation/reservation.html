@@ -1,0 +1,179 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+
+<!-- Wrapper -->
+<div id="wrapper">
+  <!-- Main -->
+  <div id="main">
+    <!-- Heading Section  -->
+    <!-- Section Reservation -->
+  <div style="background-image: url('../../assets/images/content.png')">
+    <section class="contact-form" id="reservation">
+      <!-- Container -->
+      <div class="container">
+        <!-- Form Reservation Section -->
+        <div class="form-fields form-reservation">
+          <!-- Reservation Form -->
+          <form id="bk_form" name="reservation" enctype="multipart/form-data" ng-submit="Submit()" method="post">
+            <p class="icon"><i class="fa fa-calendar"></i></p>
+            <h2>Book a table</h2>
+            <h4 class="tagline">WE WOULD LOVE TO COOK FOR YOU</h4>
+            <p class="text-center diam_img"><img alt="Diamonds" src="../assets/images/diamond.png"></p>
+            <div id="response" class="text-center">
+              <!--This will hold our error messages and the response from the server. -->
+            </div>
+            <!-- Row -->
+            <div class="row wow fadeInDown" data-wow-offset="50" data-wow-duration="0.3s" data-wow-delay="0.1s">
+              <div class="col col-md-5 col-sm-5">
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                  <label class="control-label" for="firstname">First Name:</label>
+                  <input class="form-control" id="firstname" type="text" name="firstname" placeholder="firstname" ng-model="reserv.firstname" ng-required="!reservation.$pristine"/>
+                </div>
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.lastname.$error.required">Last Name is required.</span>
+                  <label class="control-label" for="lastname">Last Name:</label>
+                  <input class="form-control" id="lastname" type="text" name="lastname" placeholder="lastname" ng-model="reserv.lastname" ng-required="!reservation.$pristine"/>
+                </div>
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.numguest.$error.required">Number Guest is required.</span>
+                  <label class="control-label" for="numguest">Guest:</label>
+                  <input class="form-control" id="numguest" type="number" name="numguest" placeholder="How Many Guests" ng-model="reserv.numguest" ng-required="!reservation.$pristine"/>
+                </div>
+
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.date.$error.required">Date is required.</span>
+                  <label>Date and Time:</label>
+                  <!--<input type="text" id="datetimepick" class="datetimepick" placeholder="When do you want to Book" name="datetimepick" ng-model="reserv.date" ng-required="!reservation.$pristine"/>-->
+                  <quick-datepicker ng-model="reserv.date" required></quick-datepicker>
+                </div>
+              </div>
+              <div class="col col-md-7 col-sm-7">
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.email.$error.required">Email is required.</span>
+                  <span ng-show="!reservation.$pristine && reservation.email.$error.email">Please enter a valid email.</span>
+                  <label for="emailid">Email:</label>
+                  <input class="form-control" type="email" id="emailid" placeholder="Your Email Address" name="email" ng-model="reserv.email" ng-required="!reservation.$pristine"/>
+                </div>
+
+                <div class="form-group">
+                  <span ng-show="!reservation.$pristine && reservation.phone.$error.required">Phone is required.</span>
+                  <span ng-show="!reservation.$pristine && reservation.phone.$error.number">Please enter a valid phone.</span>
+                  <label class="control-label" for="phone">Phone:</label>
+                  <input class="form-control" id="phone" type="number" name="phone" placeholder="phone" ng-model="reserv.phone" ng-required="!reservation.$pristine"/>
+                </div>
+
+                <p><label>Your Suggestions:</label>
+                  <textarea rows="17" placeholder="How can we help you?" name="suggestions" id="suggestions" ng-model="reserv.suggest"></textarea></p>
+                <p class="hidden-lg hidden-md hidden-sm"><button id="submit2" name="submit" type="submit" class="btn btn-1 btn-1e" ng-disabled="!reservation.$valid">Make Your Booking</button></p>
+                <p class="hidden-xs"><button id="submit" name="submit" type="submit" class="btn btn-1 btn-1e">Make Your Booking</button></p>
+<br>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- Row Ends -->
+          </form>
+          <!-- Reservation Form Ends -->
+        </div>
+        <!-- Form Reservation Section Ends -->
+      </div>
+      <!-- Container -->
+    </section>
+    <!-- Section Reservation Ends -->
+  </div>
+
+  <div ng-include="'Components/footer/footer.html'"></div>
+
+  </div>
+  <!-- Main Ends -->
+</div>
+<!-- Wrapper Ends -->
+
+<!--<script type="text/javascript">
+  $(function(){
+    "use strict";
+    $(document).ready(function(){
+      //Simpel date time picker
+      $('*[name=datetimepick]').appendDtpicker({
+        "autodateOnStart": false,
+        "futureOnly": true,
+        "closeOnSelected": true
+      });
+
+    });
+    var wow = new WOW(
+      {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+    )
+    wow.init();
+  });
+</script>-->
+
+<!--      <div class="content light-box-info">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <img src="../../assets/images/close.png" title="close" /> </button>
+        &lt;!&ndash; strat-date-piker &ndash;&gt;
+        <link rel="stylesheet" href="../../assets/css/jquery-ui.css" />
+        <script src="../../assets/js/jquery-ui.js"></script>
+        <script>
+          $(function() {
+            $( "#datepicker,#datepicker1" ).datepicker();
+          });
+        </script>
+        &lt;!&ndash; //End-date-piker &ndash;&gt;
+
+        <div class="online_reservation">
+          <div class="b_room">
+            <div class="booking_room">
+              <div class="reservation">
+                <h4>Where Do you Want To Dine</h4>
+                <div class="cuisine">
+                  <input type="text" placeholder="Retaurant Name,Location,area,cuisine.." required=" ">
+                </div>
+                <ul>
+                  <li  class="span1_of_1 left">
+                    <div class="book_date">
+                      <form>
+                        <input class="date" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+                      </form>
+                    </div>
+                  </li>
+                  <li class="span1_of_1">
+                    &lt;!&ndash; start section_room &ndash;&gt;
+                    <div class="section_room">
+                      <select id="country" onchange="change_country(this.value)" class="frm-field required">
+                        <option value="null">Lunch</option>
+                        <option value="null">Dinner</option>
+                        <option value="AX">Break Fast</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="span1_of_1">
+                    &lt;!&ndash; start section_room &ndash;&gt;
+                    <div class="section_room">
+                      <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                        <option value="null">2 People</option>
+                        <option value="null">3 People</option>
+                        <option value="AX">4 People</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="span1_of_3">
+                    <div class="date_btn">
+                      <form>
+                        <input type="submit" value="Find A Table" />
+                      </form>
+                    </div>
+                  </li>
+                  <div class="clearfix"> </div>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        &lt;!&ndash; end-model-box &ndash;&gt;
+      </div>-->

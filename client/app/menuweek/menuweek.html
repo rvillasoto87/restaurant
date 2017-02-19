@@ -1,0 +1,236 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+
+<p></br></br></br></p>
+<p></br></p>
+
+
+<div class="col col-md-6 col-sm-6 wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+
+
+  <div class="img-section" style="background-image: url('../../assets/images/7.jpg')">
+  <section id="mani" class="parallax-window img_overlay" data-parallax="scroll" data-image-src="images/home_bg.jpg">
+    <!-- Img Section -->
+  </section>
+  </div>
+</div>
+
+<!-- Lado Derecho-->
+<div class="col col-md-6 col-sm-6 wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+
+<div class="panel panel-warning">
+  <div class="panel-heading" align="center" style="color: #000000"><strong>MENU OF THE WEEK</strong></div><p></p>
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        {{semana[0].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseOne" class="panel-collapse collapse">
+     <div class="panel-body">
+       <!-- Row, Menu Items -->
+       <div class="row menu-items">
+           <!-- Item Columns -->
+         <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[0].categorias">
+           <h4 style="color: #080808">{{cate.ident}}</h4>
+           <div class="col-menu" ng-repeat="menu in cate.menu">
+             <div class="col col-md-9 col-sm-9 col-xs-9">
+               <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+               <p style="color: #080808">{{menu.descripcion}}</p>
+             </div>
+             <div class="col col-md-3 col-sm-3 col-xs-3">
+               <h4 class="item-price">{{menu.precio | currency}}</h4>
+             </div>
+             <div class="clearfix"></div>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        {{semana[1].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseTwo" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[1].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTres">
+        {{semana[2].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseTres" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[2].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+        {{semana[3].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseFour" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[3].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+        {{semana[4].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseFive" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[4].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+        {{semana[5].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseSix" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[5].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+        {{semana[6].dia}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapseSeven" class="panel-collapse collapse">
+    <div class="panel-body">
+      <!-- Row, Menu Items -->
+      <div class="row menu-items">
+        <!-- Item Columns -->
+        <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in semana[6].categorias">
+          <h4 style="color: #080808">{{cate.ident}}</h4>
+          <div class="col-menu" ng-repeat="menu in cate.menu">
+            <div class="col col-md-9 col-sm-9 col-xs-9">
+              <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+              <p style="color: #080808">{{menu.descripcion}}</p>
+            </div>
+            <div class="col col-md-3 col-sm-3 col-xs-3">
+              <h4 class="item-price">{{menu.precio | currency}}</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div></div>
+
+

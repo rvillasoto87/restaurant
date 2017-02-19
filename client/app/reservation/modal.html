@@ -1,0 +1,176 @@
+<!--<div class="modal-body">
+  <div class="modal-content light-box-info">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <img src="../../assets/images/close.png" title="close" /> </button>
+    &lt;!&ndash; strat-date-piker &ndash;&gt;
+    <link rel="stylesheet" href="../../assets/css/jquery-ui.css" />
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#datepicker,#datepicker1" ).datepicker();
+      });
+    </script>
+    &lt;!&ndash; //End-date-piker &ndash;&gt;
+
+    <div class="online_reservation">
+      <div class="b_room">
+        <div class="booking_room">
+          <div class="reservation">
+            <h4>Where Do you Want To Dine</h4>
+            <div class="cuisine">
+              <input type="text" placeholder="Retaurant Name,Location,area,cuisine.." required=" ">
+            </div>
+            <ul>
+              <li  class="span1_of_1 left">
+                <div class="book_date">
+                  <form>
+                    <input class="date" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+                  </form>
+                </div>
+              </li>
+              <li class="span1_of_1">
+                &lt;!&ndash; start section_room &ndash;&gt;
+                <div class="section_room">
+                  <select id="country" onchange="change_country(this.value)" class="frm-field required">
+                    <option value="null">Lunch</option>
+                    <option value="null">Dinner</option>
+                    <option value="AX">Break Fast</option>
+                  </select>
+                </div>
+              </li>
+              <li class="span1_of_1">
+                &lt;!&ndash; start section_room &ndash;&gt;
+                <div class="section_room">
+                  <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                    <option value="null">2 People</option>
+                    <option value="null">3 People</option>
+                    <option value="AX">4 People</option>
+                  </select>
+                </div>
+              </li>
+              <li class="span1_of_3">
+                <div class="date_btn">
+                  <form>
+                    <input type="submit" value="Find A Table" />
+                  </form>
+                </div>
+              </li>
+              <div class="clearfix"> </div>
+            </ul>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    &lt;!&ndash; end-model-box &ndash;&gt;
+  </div>
+</div>-->
+
+
+<!-----pop-up-grid---->
+<!--<div class="modal-body">
+  <div class="payment-online-form-left">
+    <form name="cart" ng-submit="addPay()" method="post" id="formPaypal">
+        <h4><span class="shipping"></span>RESERVATION</h4>
+        <link rel="stylesheet" href="../../assets/css/jquery-ui.css" />
+        <script src="../../assets/js/jquery-ui.js"></script>
+        <script>
+          $(function() {
+            $( "#datepicker,#datepicker1" ).datepicker();
+          });
+        </script>
+            <div class="reservation">
+                  <div  class="span1_of_1 left">
+                    <div class="book_date">
+                      <form>
+                        <input class="date" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+                      </form>
+                    </div>
+                  </div>
+                &lt;!&ndash;<ul class="payment-sendbtns">
+                  <li>
+                    <select class="food" onchange="change_country(this.value)">
+                      <option value="AX">Break Fast</option>
+                      <option value="null">Lunch</option>
+                      <option value="null">Dinner</option>
+                    </select>
+                  </li>
+                  <li>
+                    <input class="text-box-dark" type="number" value="Frist Name" ng-model="pay.firstname" placeholder="Frist Name" ng-required="true">
+                  </li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="text" value="Frist Name" ng-model="pay.firstname" placeholder="Frist Name" ng-required="true"></li>
+                  <li><input class="text-box-dark" type="text" value="Last Name" ng-model="pay.lastname" placeholder="Last Name" ng-required="true"></li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="email" value="Email" ng-model="pay.email" placeholder="Email"></li>
+                  <li><input class="text-box-dark" type="text" value="Company Name" ng-model="pay.company" placeholder="Company Name"></li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="number" value="Phone" ng-model="pay.phone" placeholder="Phone" ng-required="true"></li>
+                  <li><input class="text-box-dark" type="text" value="Address" ng-model="pay.addresss" placeholder="Address" ng-required="true"></li>
+                  <div class="clearfix"></div>
+                </ul>
+                <div class="clearfix"></div>
+                <ul class="payment-sendbtns">
+                  <li><input type="reset" value="Cancel" ng-click="cancel()"></li>
+                  <li><input type="submit" value="Process order" ng-show="visible"></li>
+                </ul>
+                <div class="clearfix"> </div>&ndash;&gt;
+
+            </div>
+  <div class="clearfix"> </div>
+    </form>
+  </div>
+</div>-->
+<!-----pop-up-grid---->
+<!-----pop-up-grid---->
+<div class="modal-body">
+  <div class="payment-online-form-left">
+    <link rel="stylesheet" href="../../assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="./reservation.css" />
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#datepicker,#datepicker1" ).datepicker();
+      });
+    </script>
+    <!--name="cart" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="formPaypal"-->
+    <form name="reservation" method="post" id="formReservation">
+      <h4><span class="shipping"> </span>RESERVATION</h4>
+      <ul class="list-unstyled">
+        <li><input class="text-box-dark" name="firstname" type="text" value="First Name" ng-model="formData.firstname" placeholder="Frist Name" ng-required="!reservation.$pristine" ng-keypress="MostrarBoton()"></li>
+        <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+        <span ng-show="!reservation.$pristine && reservation.lastname.$error.required">Last Name is required.</span>
+        <li><input class="text-box-dark" name="lastname" type="text" value="Last Name" ng-model="formData.lastname" placeholder="Last Name" ng-required="!reservation.$pristine" ng-keypress="MostrarBoton()"></li>
+      </ul>
+      <ul class="list-unstyled">
+        <li><input class="text-box-dark" name="email" type="email" value="Email" ng-model="formData.email" placeholder="Email" ng-required="!reservation.$pristine" ng-class="{ error: exampleForm.email.$error.required && !exampleForm.$pristine, warning: exampleForm.email.$error.email }" ng-keypress="MostrarBoton()"></li>
+        <span ng-show="!reservation.$pristine && reservation.email.$error.required">Email is required.</span>
+        <span ng-show="!reservation.$pristine && reservation.email.$error.email">Please enter a valid email.</span>
+        <li><input class="text-box-dark" name="phone" type="number" value="Phone" ng-model="formData.phone" placeholder="Phone" ng-required="!reservation.$pristine" ng-keypress="MostrarBoton()"></li>
+        <span ng-show="!reservation.$pristine && reservation.phone.$error.required">Phone is required.</span>
+        <span ng-show="!reservation.$pristine && reservation.phone.$error.number">Please enter a valid phone.</span>
+        <!--<li><input class="text-box-dark" type="text" value="Company Name" ng-model="pay.company" placeholder="Company Name"></li>-->
+      </ul>
+      <ul class="list-unstyled">
+        <li><input class="text-box-dark" name="amount" type="number" value="people amount" ng-model="formData.amount" placeholder="People Amount" ng-keypress="MostrarBoton()")></li>
+        <span ng-show="!reservation.$pristine && reservation.date.$error.required">Date is required.</span>
+        <li><input  type="text" class="form-control" name="date" datepicker-popup="yyyy/MM/dd" ng-disabled="isOpen" ng-model="formData.date" is-open="isOpen"  ng-click="isOpen = true" placeholder="Date" ng-required="!reservation.$pristine" ng-keypress="MostrarBoton()" /></li>
+        <div class="clearfix"></div>
+      </ul>
+      <ul class="list-unstyled">
+        <timepicker ng-model="formData.mytime" name="time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" ng-keypress="MostrarBoton()"></timepicker>
+        <!--<pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>-->
+        <div class="clearfix"></div>
+      </ul>
+      <div class="clearfix"></div>
+      <ul class="payment-sendbtns">
+        <li><input type="reset" value="Cancel" ng-click="cancel()"></li>
+        <li><input type="submit" value="Process order" ng-show="visible" ng-click="submitForm(formData)" ng-disabled="!reservation.$valid"></li>
+      </ul>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+</div>
+<!-----pop-up-grid---->

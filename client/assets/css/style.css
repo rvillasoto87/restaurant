@@ -1,0 +1,1999 @@
+/*
+* Comida v-1.0
+* Copyright 2015, Crelegant Team
+* www.crelegant.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 01/08/2015
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- 1. Global Styles
+
+- 2. Header Styles
+
+- 3. Home Booking Form Section
+
+- 4. Form Styles
+
+- 5. Section Styles
+
+- 6. Item Menu Section
+
+- 7. Story Section
+
+- 8. Newsletter Section
+
+- 9.Testimonial Section
+
+- 10 Footer Section
+
+- 11. Page Breadcrumb Styles
+
+- 12. Content Section
+
+- 13. Press Section
+
+- 14. Menu Page Styles
+
+- 15. Section background styles
+
+- 16. Chalk Menu
+
+- 17. Owl Carousel Styles
+
+- 18. Contact Page
+
+- 19. Navigation Styles
+
+- 20. Responsive Style
+
+*/
+/* 1. Global Styles */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700,800|Pinyon+Script|Fredericka+the+Great);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #dfa240;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+
+section {
+    padding: 100px 0;
+}
+
+#wrapper {
+    margin: 0 20px;
+    max-width: 100%;
+}
+
+#main {
+    padding-top: 82px;
+    position: relative;
+}
+
+#maini {
+  padding-top: 10px;
+  position: relative;
+}
+
+#center {
+  padding: 120px;
+  position: relative;
+}
+
+.divider1 {
+    background: transparent url("../images/scallops.png") repeat-x scroll center center;
+    height: 50px;
+    margin-top: -10px;
+    position: relative;
+    z-index: 9;
+}
+
+.divider2 {
+    background: transparent url("../images/scallops-r.png") repeat-x scroll center center;
+    height: 50px;
+    position: relative;
+    z-index: 9;
+    top: 10px;
+}
+
+/* 1.1 Padding Margin  */
+
+.p0 {
+    padding: 0px !important;
+}
+
+.p5 {
+    padding: 5px !important;
+}
+
+.p10 {
+    padding: 10px !important;
+}
+
+.p15 {
+    padding: 15px !important;
+}
+
+.p20 {
+    padding: 20px !important;
+}
+
+.p25 {
+    padding: 25px !important;
+}
+
+.p30 {
+    padding: 30px !important;
+}
+
+.p35 {
+    padding: 35px !important;
+}
+
+.p40 {
+    padding: 40px !important;
+}
+
+.p45 {
+    padding: 45px !important;
+}
+
+.p50 {
+    padding: 50px !important;
+}
+
+.m0 {
+    margin: 0px !important;
+}
+
+.mcntr {
+    margin: 0px auto !important;
+}
+
+.mb0 {
+    margin-bottom: 0px !important;
+}
+
+.m5 {
+    margin: 5px !important;
+}
+
+.m10 {
+    margin: 10px !important;
+}
+
+.m15 {
+    margin: 15px !important;
+}
+
+.m20 {
+    margin: 20px !important;
+}
+
+.m25 {
+    margin: 25px !important;
+}
+
+.m30 {
+    margin: 30px !important;
+}
+
+.m35 {
+    margin: 35px !important;
+}
+
+.m40 {
+    margin: 40px !important;
+}
+
+.m45 {
+    margin: 45px !important;
+}
+
+.m50 {
+    margin: 50px !important;
+}
+
+
+/* 2. Header Styles */
+
+.header {
+    text-align: center;
+    padding: 0px 0 70px;
+}
+
+.menu {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu.top-menu,
+.menu.social {
+    margin: 26px 0;
+}
+
+.top-menu.menu li,
+.menu.social li {
+    display: inline-block;
+}
+
+.menu.top-menu li {
+    padding: 5px 8px;
+}
+
+.menu.top-menu li a {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    margin: 0;
+    color: #000;
+}
+
+.menu.top-menu li.selected a {
+    color: #dfa240;
+}
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after,
+.cl-effect-4 li.selected a::after {
+    background: #dfa240;
+    height: 2px;
+    margin-top: 4px;
+}
+
+.row.head_top {
+    margin-left: -30px;
+}
+
+.row.head_top .col {
+    padding: 0;
+}
+
+.menu.social li a {
+    font-size: 21px;
+    padding: 5px 10px;
+    color: #000;
+}
+
+a.fa-icons i,
+ul.social a i {
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    position: relative;
+    bottom: 0;
+}
+
+ul.social a.fa-icons:hover i,
+ul.social a:hover i {
+    bottom: 9px;
+    color: #C79C68;
+}
+
+ul.social a:hover i {
+    color: #fff;
+}
+
+.logo {
+    margin: 18px 0;
+}
+
+.logo p {
+    color: #dfa240;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* 3. Home Booking Form Section */
+
+#mani {
+  height: 450px;
+  padding: 70px 0;
+}
+
+#mainimg {
+    height: 760px;
+}
+
+#mainimg .img-section {
+    padding: 70px 0;
+    height: 600px;
+}
+
+#mainimg .img-section .mainimg-content {
+    padding-top: 40px;
+}
+
+#mainimg .img-section .mainimg-content h4 {
+    color: #dfa240;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 55px;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin: 15px 0 0;
+    visibility:hidden;
+}
+
+#mainimg .img-section .mainimg-content h1 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: 60px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 8px;
+    visibility:hidden;
+}
+
+#mainimg .img-section .mainimg-content span {
+    color: #dfa240;
+    font-weight: 200;
+}
+
+#mainimg .img-section .mainimg-content p {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 19px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    visibility:hidden;
+}
+
+#mainimg .img-section .mainimg-content p span {
+    color: #dfa240;
+}
+
+section#res-details {
+    padding: 50px 0 100px;
+}
+
+.details h4 {
+    color: #272622;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.details p {
+    color: #b1b1b1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+/* 4. Form Styles */
+
+.form-section {
+    position: relative;
+    visibility: hidden;
+}
+
+.form.bookatable {
+    position: absolute;
+    width: 93%;
+    z-index: 99;
+    right: 0;
+}
+
+.bookatable {
+    background: #fff none repeat scroll 0 0;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #fdfdfd;
+}
+
+.form-container {
+    border: 1px solid #fdfdfd;
+    padding: 50px 42px;
+}
+
+.form-reservation {
+    width: 925px;
+    margin: 0 auto;
+}
+
+.form-fields .icon,
+.form-fields h3,
+.form-fields h2,
+.form-fields .tagline {
+    text-align: center;
+}
+
+p.diam_img {
+    margin-bottom: 25px;
+}
+
+.form-fields .icon {
+    color: #272622;
+    font-size: 40px;
+}
+
+.form-fields h3,
+.form-fields h2 {
+    color: #272622;
+    font-size: 25px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.form-fields h2 {
+    font-size: 40px;
+}
+
+.form-fields .tagline {
+    color: #dfa240;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-fields label {
+    color: #272622;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+}
+
+.form-group {
+     margin-bottom: 0px;
+}
+
+.form-fields input,
+.form-fields textarea {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: medium none transparent;
+    font-size: 13px;
+    margin: 10px 0 32px;
+    padding: 8px 6px;
+    width: 100%;
+    height: 45px;
+	border-radius: 4px;
+}
+
+.form-fields textarea {
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+.col-menu .col {
+    padding: 0;
+}
+
+div#response {
+    margin-bottom: 15px;
+}
+
+div#response p {
+    display: none;
+}
+
+form.frm_error .require {
+    border: 1px solid red;
+}
+
+.form-fields button,
+.contact-form .b-submit button {
+    background: #dfa240;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    border: 1px solid #dfa240;
+}
+
+.form-fields button:hover,
+.contact-form .b-submit button:hover {
+    color: #dfa240;
+}
+
+.btn {
+    border-radius: 0;
+}
+/* 5. Section Styles */
+
+.section-title {
+    color: #dfa240;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-align: center;
+    margin: 0
+}
+
+.section-subtitle {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+section#ingredients {
+    padding: 60px 0;
+}
+
+section#ingredients button.btn {
+    margin-bottom: 0;
+}
+
+h4.sub-title.btm_marg {
+    margin-bottom: 0;
+}
+
+.section-content .header {
+    padding: 0 0 50px;
+}
+
+.section-content .header.padd_top {
+    padding: 40px 0;
+}
+
+section#ourchef {
+    padding: 100px 0 0;
+}
+
+/*
+div.col.chef_img img {
+    position: relative;
+    top: -30px;
+}
+
+
+div.col.chef_img {
+    margin-bottom: -30px;
+    position: relative;
+    bottom: 30px;
+}
+
+*/
+
+section#takeaseat {
+    padding: 120px 0;
+}
+
+section#reservation {
+    padding: 50px 0;
+}
+/* 6. Item Menu Section */
+
+.item {
+    margin-bottom: 25px;
+}
+
+.item h4.item-heading,
+.item h4.item-price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+}
+
+.item-heading::after {
+    border-bottom: 1px solid;
+    content: "";
+    float: right;
+    height: 8px;
+    width: 45%;
+}
+
+.item h4.item-price {
+    color: #dfa240;
+    text-align: center;
+}
+
+.item p {
+    color: #fff;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+    margin: 20px 0;
+    width: 80%;
+}
+
+.item p.new {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    background: #dfa240;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 25px auto;
+    font-size: 12px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+/*
+.menu-items .menubutton button,
+button.btn.btn-1.btn-1e {
+    background-color: #dfa240;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-align: center;
+    border: 1px solid #c79c68;
+    text-transform: uppercase;
+}
+
+.menu-items .menubutton button:hover,
+button.btn.btn-1.btn-1e:hover {
+    border: 1px solid #c79c68;
+    color: #dfa240;
+    background: none;
+}
+*/
+
+.menubutton .sub-title > a {
+    margin-bottom: 0;
+    color: #c79c68;
+    border-color: #c79c68;
+}
+
+.menubutton .sub-title > a:hover {
+    color: #dfa240;
+    border-color: #dfa240;
+}
+
+.menubutton h3.sub-title {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+/* 7. Story Section */
+
+.main-title {
+    color: #272622;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    margin: 0;
+}
+
+.tagline {
+    color: #dfa240;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.tag {
+  color: #000000;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  width:22%;
+  height:auto;
+  margin: 25px auto;
+  align-content: center;
+}
+
+.section-content p {
+    color: #9c9c9c;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 21px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.sub-title,
+.sub-title a {
+    color: #c79c68;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 19px;
+    margin: 35px 0 60px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+}
+
+.sub-title > a {
+    color: #c79c68;
+    border-bottom: 2px solid #c79c68;
+    padding-bottom: 6px;
+}
+
+.sub-title > a:hover {
+    color: #dfa240;
+    border-color: #dfa240;
+}
+
+
+.staff-name {
+    color: #272622;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.staff-designation {
+    color: #9c9c9c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 18px;
+    text-align: center;
+}
+/* 8. Newsletter Section */
+
+.newsletter {
+    background: #dfa240;
+    padding: 0px;
+}
+
+.newsletter .col.col-md-5 {
+    padding-right: 0;
+}
+
+h2.newsletter-title {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 38px 0;
+    display: inline-block;
+}
+
+p.news_desc {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 38px;
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 7px;
+    padding-left: 10px;
+}
+
+.newsletter form {
+    margin: 35px 0;
+}
+
+.newsletter .col.col-md-4 {
+    padding: 0 10px;
+}
+
+.newsletter .col.col-md-7 {
+    padding: 0 50px;
+    padding-right: 0;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    background: #cf9034;
+    border: medium none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    padding: 13px 8px;
+    width: 100%;
+}
+
+.newsletter input::-webkit-input-placeholder {
+    color: white;
+}
+
+.newsletter input:-moz-placeholder {
+    color: white;
+}
+
+.newsletter input::-moz-placeholder {
+    color: white;
+}
+
+.newsletter input:-ms-input-placeholder {
+    color: white;
+}
+
+.newsletter button.btn.btn-1.btn-1e {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fdfdfd;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding: 10px 38px;
+    margin: 0;
+    width: 80%;
+}
+
+.newsletter button.btn.btn-1.btn-1e::after {
+    background: #fff;
+}
+
+.newsletter button.btn.btn-1.btn-1e:hover {
+    color: #DFA240;
+}
+/* 9.Testimonial Section */
+
+section.last_sec {
+    padding: 100px 0 160px;
+}
+
+div.last_sec {
+    padding-bottom: 160px;
+}
+
+.tes-statement {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 48px;
+}
+
+.tes-statement:before,
+.tes-statement:after {
+    content: "\"";
+}
+
+.tes-author {
+    color: #dfa240;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.slick-next {
+    right: 20px;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.folio-img,
+.folio-img img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.folio-img {
+    margin: 0 auto;
+}
+/* 10 Footer Section */
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+div#main.no_rel {
+    position: inherit;
+}
+
+div#main.no_rel footer {
+    position: relative;
+    background: #272622;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 0px;
+}
+
+footer p.copyrights a {
+    color: #c79c68;
+}
+
+footer p.copyrights a:hover {
+    color: #dfa240;
+}
+
+footer p.copyrights {
+    color: #e4dde1;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+/* 11. Page Breadcrumb Styles */
+
+.page-main {
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.page-subtitle {
+    color: #dfa240;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-align: center;
+    margin: 0
+}
+
+.page-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* 12. Content Section */
+
+.section-content header {
+    padding: 0px 0 30px;
+}
+
+.light p {
+    color: #fff;
+}
+
+.section-content ul.social {
+    list-style: outside none none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.section-content ul.social li {
+    display: inline-block;
+}
+
+.section-content ul.social li.text_cont {
+    position: relative;
+    top: -3px;
+}
+
+.section-content ul.social li.text_cont p {
+    margin: 0;
+    line-height: 1;
+}
+
+.section-content ul.social li a {
+    display: block;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    color: #dfa240;
+}
+
+/* 13. Press Section */
+
+.news-mention {
+    margin-bottom: 40px;
+}
+
+.news-mention h4.news-title {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 19px;
+}
+
+.news-mention p.news-statement {
+    color: #e4dde1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 21px;
+}
+
+.news-mention p.news-source {
+    color: #c79c68;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 16px;
+}
+
+/* 14. Menu Page Styles */
+
+section.menu-items {
+    padding: 55px 0;
+}
+
+section.menu-items .col:first-child {
+    padding-right: 25px;
+}
+
+section.menu-items .col:nth-child(2) {
+    padding-left: 25px;
+}
+
+.menu-title h2 {
+    background: rgba(0, 0, 0, 0) url("../images/haube.png") no-repeat scroll right center;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    border-bottom: 2px solid #c79c68;
+    padding: 0 0 25px;
+    margin: 0 0 20px;
+}
+
+.menu-item-name p.main-item-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    color: #000;
+    margin: 0;
+}
+
+.menu-item-name p.sub {
+    color: #696969;
+    font-weight: 400;
+    font-size: 13px;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.menu-item-price {
+    text-align: right;
+}
+
+.menu-item-price p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.page-sub-title {
+    padding: 120px 0;
+}
+
+/* 15. Section background styles */
+
+.background {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.background-1 {
+    background-image: url('../images/home_1.jpg');
+}
+
+.background-2 {
+    background-image: url('../images/breackf.jpg');
+}
+
+.background-3 {
+    background-image: url('../images/3.jpg');
+}
+
+.background-4 {
+    background-image: url('../images/home_2.jpg');
+}
+
+.background-5 {
+    background-image: url('../images/1.jpg');
+}
+
+.background-6 {
+    background-image: url('../images/food.jpg');
+}
+
+.background-7 {
+    background-image: url('../images/2.jpg');
+}
+
+.background-8 {
+    background-image: url('../images/home_3.jpg');
+}
+
+.background-9 {
+    background: url('../images/about_1.jpg');
+}
+
+section#page-main-section, section.img_overlay {
+    position: relative;
+}
+
+section#page-main-section:before, section.img_overlay:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section.divd_sec {
+    padding: 55px 0 100px;
+}
+
+div.ie-container {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    width: 96%;
+}
+
+div.ie-container.sec_sett {
+    margin-left: 100%;
+    margin-right: 0;
+    width: 90%;
+}
+
+div.ie-container img {
+    width: 100%;
+}
+
+div.ie-container:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+/* 16. Chalk Menu */
+
+.chalkbmenu {
+    position: relative;
+}
+
+.chalkbmenu .menu-section {
+    padding: 25px 0;
+}
+
+.chalkbmenu h4.menu-heading {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.chalkbmenu h4.menu-heading:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 6px;
+    border-bottom: 3px dotted #fff;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.chalkbmenu .menu-section .col {
+    padding: 0;
+}
+
+.chalkbmenu h4.menu-heading {
+    padding-left: 60px;
+    background: url('../images/knife_fork.png') no-repeat;
+}
+
+.chalkbmenu h4 {
+    margin: 20px 0 35px;
+    color: #fff;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.dec-border img.border {
+    position: absolute;
+    z-index: 99;
+}
+
+.dec-border img.img-1 {
+    right: 80px;
+    top: -150px;
+}
+
+.dec-border img.img-2 {
+    bottom: -145px;
+    left: 60px;
+}
+/* 17. Owl Carousel Styles */
+
+#owl-demo {
+    overflow: hidden;
+}
+
+.owl-theme .owl-controls {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+    background: transparent;
+    padding: 5px;
+    color: #dfa240;
+}
+
+.owl-theme .owl-controls .owl-buttons div i {
+    padding: 0;
+    background: rgba(223, 162, 64, 0.59);
+    font-size: 24px;
+    color: #fff;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.no-gap {
+    padding: 0;
+    height: 400px;
+}
+
+.flexmainimg {
+    margin: 0;
+    border: none;
+}
+
+.flexmainimg .flex-direction-nav a,
+.flexmainimg .flex-direction-nav a {
+    display: block;
+    /* I added this line */
+}
+
+.flexmainimg .flex-direction-nav a.flex-prev,
+.flexmainimg .flex-direction-nav a.flex-next {
+    ... -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+}
+/* 18. Contact Page */
+
+section#contact-us {
+    padding: 50px 0;
+}
+
+.contact-form h5 {
+    color: #272622;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 26px;
+    margin-bottom: 60px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #272622;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    border-bottom: 1px solid #dfa240;
+    margin-bottom: 50px;
+    padding: 15px 10px;
+    font-size: 13px;
+}
+
+.contact-form input {
+    width: 80%;
+}
+
+.contact-form textarea {
+    width: 91%;
+    margin-bottom: 20px;
+    height: 145px;
+}
+
+.contact-form .b-submit button {
+    background: #dfa240 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 0;
+    width: 91%;
+}
+
+.contact-form .b-submit button:hover:after {
+    height: 600px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+}
+
+.text-danger {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+.form-fields.form-reservation input {
+    padding: 12px 10px;
+}
+
+.form-reservation .col.col-md-5 {
+    padding: 0 30px;
+}
+
+.form-reservation .col.col-md-7 {
+    padding: 0 30px;
+}
+
+.form-reservation textarea {
+    height: 200px;
+}
+
+/* 19. Navigation Styles */
+
+.navbar-brand {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.navbar-nav > li > a {
+    font-size: 14px;
+    margin: 0;
+}
+
+.navbar-default {
+    margin: 0 15px;
+    margin-left: 30px;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background: none;
+}
+
+.navbar-default .navbar-toggle:hover span.icon-bar {
+    background: #aaa;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    background: #e0e0e0;
+}
+/* 20. Responsive */
+
+@media all and (min-width: 1350px) {
+	#wrapper, header {
+		width:1350px;
+		margin: 0 auto;
+	}
+}
+@media all and (max-width: 1199px) {
+    .menu.top-menu li a {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+    .menu.social li a {
+        font-size: 20px;
+    }
+    h2.newsletter-title {
+        margin: 29px 0;
+        font-size: 27px;
+    }
+    h2.newsletter-title span {
+        font-size: 12px;
+    }
+    .item-heading::after {
+        border-bottom: 1px solid;
+        content: "";
+        float: right;
+        height: 14px;
+        width: 35%;
+    }
+}
+
+@media all and (max-width: 1018px) {
+    header {
+        position: static;
+    }
+    #main {
+        padding-top: 0px;
+    }
+    .slick-next {
+        right: 10px;
+    }
+    .slick-prev {
+        left: 10px;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .menu.top-menu,
+    .menu.social {
+        margin: 15px 0;
+        text-align: center;
+    }
+    #wrapper {
+        margin: 0;
+    }
+    .menu.top-menu li a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    #mainimg .img-section .mainimg-content {
+        padding-top: 0;
+    }
+    #mainimg,
+    #mainimg .img-section {
+        height: auto;
+    }
+    #mainimg .img-section {
+        padding: 0;
+    }
+    .form.bookatable,
+    .form-section {
+        position: static;
+    }
+    .logo p {
+        font-size: 25px;
+    }
+    #mainimg .img-section .mainimg-content h4,
+    #mainimg .img-section .mainimg-content h1,
+    #mainimg .img-section .mainimg-content p {
+        text-align: center;
+    }
+    .slick-next {
+        right: 0px;
+    }
+    .slick-prev {
+        left: 0px;
+    }
+    .newsletter input {
+        margin-bottom: 20px;
+    }
+    .section-content ul.social {
+        list-style: outside none none;
+        margin: 25px 0;
+        padding: 0;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .form-reservation {
+        width: 100%;
+    }
+    .item-heading::after {
+        content: "";
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 959px) {}
+
+@media all and (max-width: 767px) {
+    .item p {
+        width: auto;
+    }
+    .header {
+        padding: 40px 0;
+    }
+    .chalkbmenu h4 {
+        font-size: 25px;
+    }
+    .page-main {
+        padding: 90px 0;
+    }
+    .details {
+        text-align: center;
+    }
+    .contact-form h5 {
+        font-size: 14px;
+    }
+    .form-fields h2 {
+        font-size: 30px;
+    }
+    .item-heading::after {
+        content: "";
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 680px) {
+    .item-heading::after {
+        content: "";
+        width: 60%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .menu-title h2 {
+        font-size: 30px;
+        background-size: 50px;
+        padding-bottom: 15px;
+    }
+    .item-heading::after {
+        content: "";
+        max-width: 56%;
+        width: 66%;
+    }
+}
+
+@media all and (max-width: 420px) {
+    h2.newsletter-title span {
+        display: block;
+        padding: 8px 0;
+    }
+    .form-section {
+        padding: 0;
+    }
+    .chalkbmenu h4 {
+        font-size: 20px;
+    }
+    .item-heading::after {
+        content: "";
+        max-width: 30%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .form-container {
+        padding: 50px 10px;
+    }
+    .form-fields p label {
+        font-size: 14px;
+    }
+}
+
+
+/* CSS MENU DESPLEGABLE */
+/* lg */
+@media (min-width: 1200px) {
+  /* Make Navigation Toggle on Desktop Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    -webkit-animation: fadeInUp 400ms;
+    animation: fadeInUp 400ms;
+  }
+
+  #portfolio .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* Make Navigation Toggle on Desktop Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    -webkit-animation: fadeInUp 400ms;
+    animation: fadeInUp 400ms;
+  }
+
+  .navbar-nav > li {
+    margin-left: 10px;
+  }
+
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .recent-work-wrap .recent-work-inner h3 a {
+    font-size: 20px;
+  }
+
+  .recent-work-wrap .overlay{
+    padding: 15px;
+  }
+
+  .services-wrap {
+    padding: 40px 10px 40px 30px;
+  }
+
+  .feature-wrap h2,
+  .single-services h2 {
+    font-size: 18px;
+  }
+
+  .feature-wrap h3,
+  .single-services h3{
+    font-size: 14px;
+  }
+
+  .tab-wrap .media .parrent.pull-left{
+    clear: both;
+    width: 100%;
+  }
+
+  .tab-wrap .media .parrent.media-body{
+    clear: both;
+  }
+
+  #portfolio .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .recent-work-wrap .overlay .preview{
+    line-height: inherit;
+  }
+
+  .team-bar .first-arrow {
+    width: 21%;
+  }
+
+  .team-bar .second-arrow {
+    width: 20%;
+  }
+
+  .team-bar .third-arrow {
+    width: 21%;
+  }
+
+  .team-bar .fourth-arrow {
+    width: 20%;
+  }
+
+  ul.social_icons li{
+    margin-right: 0;
+  }
+
+}
+
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Make Navigation Toggle on Desktop Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    -webkit-animation: fadeInUp 400ms;
+    animation: fadeInUp 400ms;
+  }
+
+
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-nav > li {
+    margin-left: 0;
+  }
+
+  #main-slider .carousel h1 {
+    font-size: 25px;
+  }
+
+  #main-slider .carousel h2 {
+    font-size: 20px;
+  }
+
+  .tab-wrap .media .parrent.pull-left,
+  .media.accordion-inner .pull-left{
+    clear: both;
+    width: 100%;
+  }
+
+  .tab-wrap .media .parrent.media-body,
+  .media.accordion-inner .media-body{
+    clear: both;
+  }
+
+  .services-wrap {
+    padding: 40px 0 40px 30px;
+  }
+
+  .recent-work-wrap .overlay{
+    padding: 15px;
+  }
+
+  .recent-work-wrap .recent-work-inner h3 a {
+    font-size: 20px;
+  }
+
+  .sinlge-skill{
+    width: 150px;
+    height: 150px;
+  }
+
+  .sinlge-skill p em {
+    font-size: 25px;
+  }
+
+  .sinlge-skill p {
+    font-size: 16px;
+  }
+
+  .team-bar .first-one-arrow {
+    width: 2%;
+  }
+
+  .team-bar .first-arrow {
+    width: 18%;
+  }
+
+  .team-bar .second-arrow {
+    width: 24%;
+  }
+
+  .team-bar .third-arrow {
+    width: 15%;
+  }
+
+  .team-bar .fourth-arrow {
+    width: 20%;
+  }
+
+  .blog .blog-item .entry-meta > span a{
+    font-size: 10px;
+  }
+}
+
+/* xs */
+@media (max-width: 767px) {
+  .container > .navbar-header, .container > .navbar-collapse{
+    margin-left: 0;
+  }
+
+  .top-number{
+    font-size: 14px;
+  }
+
+  input.search-form:hover {
+    width: 120px;
+  }
+
+  .navbar-nav > li {
+    padding-bottom: 0;
+  }
+
+  #main-slider .carousel h1 {
+    font-size: 25px;
+  }
+
+  #main-slider .carousel h2 {
+    font-size: 16px;
+  }
+
+  .feature-wrap h2,
+  .single-services h2 {
+    font-size: 18px;
+  }
+
+  .feature-wrap h3,
+  .single-services h3{
+    font-size: 14px;
+  }
+
+
+  .media.accordion-inner .pull-left,
+  .media.accordion-inner .media-body{
+    clear: both;
+  }
+
+  .accordion-inner h4 {
+    margin-top: 10px;
+  }
+
+  .tab-wrap .media .pull-left{
+    clear: both;
+    width: 100%;
+  }
+
+  .tab-wrap .media .media-body{
+    clear: both;
+  }
+
+  .nav-tabs > li.active > a:after{
+    display: none;
+  }
+
+  #footer .col-sm-6{
+    text-align:center;
+  }
+
+  #footer .pull-right{
+    float: none !important;
+  }
+
+  .sinlge-skill {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .team .single-profile-top,
+  .team .single-profile-bottom {
+    margin-bottom: 30px;
+  }
+
+  .clients-area {
+    padding: 60px 0;
+  }
+
+  .clients-area h1 {
+    font-size: 25px;
+  }
+
+  .portfolio-item,
+  #recent-works .col-xs-12.col-sm-4.col-md-3{
+    padding:0 15px;
+  }
+
+  ul.social_icons li{
+    margin-right: 0;
+  }
+
+  .blog .blog-item .entry-meta{
+    margin-bottom: 20px;
+  }
+
+  .blog .blog-item .blog-content h3 {
+    margin-bottom: 20px;
+  }
+
+  .post_reply_comments {
+    padding-left: 20px;
+  }
+}
+
+/* XS Portrait */
+@media (max-width: 480px) {
+}
+
+.btn-warning{
+  color:#fff;
+  background-color:#f0ad4e;
+  border-color:#eea236
+}
+
+.btn-warning.focus,.btn-warning:focus{
+  color:#fff;
+  background-color:#ec971f;
+  border-color:#985f0d
+}
+
+.btn-warning:hover{
+  color:#fff;
+  background-color:#ec971f;
+  border-color:#d58512
+}
+
+.btn-warning.active,.btn-warning:active,.open>.dropdown-toggle.btn-warning{
+  color:#fff;
+  background-color:#ec971f;
+  border-color:#d58512
+}
+
+.btn-warning.active.focus,.btn-warning.active:focus,.btn-warning.active:hover,.btn-warning:active.focus,.btn-warning:active:focus,.btn-warning:active:hover,.open>.dropdown-toggle.btn-warning.focus,.open>.dropdown-toggle.btn-warning:focus,.open>.dropdown-toggle.btn-warning:hover{
+  color:#fff;
+  background-color:#d58512;
+  border-color:#985f0d
+}
+
+.btn-warning.active,.btn-warning:active,.open>.dropdown-toggle.btn-warning{
+  background-image:none
+}
+.btn-warning.disabled,.btn-warning.disabled.active,.btn-warning.disabled.focus,.btn-warning.disabled:active,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled],.btn-warning[disabled].active,.btn-warning[disabled].focus,.btn-warning[disabled]:active,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning.active,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{
+  background-color:#f0ad4e;
+  border-color:#eea236
+}
+
+.btn-warning .badge{
+  color:#f0ad4e;
+  background-color:#fff
+}
+
+

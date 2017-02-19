@@ -1,0 +1,68 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+
+<!-- Main -->
+<div id="main">
+  <!-- Section Main Image Section -->
+  <div style="background-image: url('../../assets/images/restaurant.jpg')">
+  <section id="mainimg" class="parallax-window img_overlay" data-parallax="scroll" data-image-src="images/home_bg.jpg">
+    <!-- Img Section -->
+    <div class="img-section">
+      <!-- Container -->
+      <div class="container">
+        <!-- Row -->
+        <div class="row">
+          <!-- Column Text Content -->
+          <div class="col col-md-7">
+            <!-- Main Image Content Class -->
+            <div class="mainimg-content">
+              <h4 class="wow fadeInDown" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">{{config.comentario}}</h4>
+            </div>
+          </div>
+          <!-- Main Image Content Class ends -->
+          <!-- Form Section Column -->
+          <div class="col col-md-5 form-section wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.2s">
+            <!-- Form Outer Section -->
+            <div class="form bookatable">
+              <!-- Form Inner Container -->
+              <div class="form-container form-fields">
+                <!-- Book Table Form -->
+                  <a class="icon" href="/reservation"><i class="fa fa-calendar"></i><h3>Book a table</h3></a>
+                <!-- Book Table Form Ends -->
+              </div>
+              <!-- Form Inner Container Ends -->
+              <div class="row details text-center">
+              <div class="col col-md- col-sm-6" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">
+                <h4>LOCATION</h4>
+                <p style="color: darkslategray">{{config.location}}</p>
+                <p style="color: darkslategray">{{config.phone}}
+                  <br />{{config.email}}</p>
+              </div>
+              <div class="col col-md-6 col-sm-6" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+                <h4>OPENING HOURS</h4>
+                <p style="color: darkslategray">{{config.opening[0].dias}}
+                  <br />{{config.opening[0].horas}}</p>
+                <p style="color: darkslategray">{{config.opening[1].dias}}
+                  <br />{{config.opening[1].horas}}</p>
+              </div>
+
+            </div>
+            </div>
+            <!-- Form Outer Section Ends -->
+          </div>
+          <!-- Form Section Column Ends -->
+        </div>
+        <!-- Row Ends -->
+      </div>
+      <!-- Container Ends -->
+    </div>
+    <!-- Img Section Ends -->
+  </section>
+  <!-- Section Main Image Ends -->
+</div>
+
+<div ng-include="'Components/footer/footer.html'"></div>
+</div>
+<!-- Main Ends -->
+
+
+

@@ -1,0 +1,172 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+
+<p></p></br>
+
+<!-- Wrapper -->
+<div id="wrapper">
+  <!-- Main -->
+  <div id="main">
+    <!-- Heading Section  -->
+    <!-- Section Reservation -->
+    <div style="background-image: url('../../assets/images/content.png')">
+      <section class="contact-form" id="reservation">
+        <!-- Container -->
+        <div class="container">
+          <!-- Form Reservation Section -->
+          <div class="form-fields form-reservation">
+            <!-- Reservation Form -->
+            <form id="bk_form" name="reservation" enctype="multipart/form-data" ng-submit="Submit()" method="post">
+              <p class="icon"><i class="fa fa-home"></i></p>
+              <h3>Information Site</h3>
+              <p class="text-center diam_img"><img alt="Diamonds" src="../assets/images/diamond.png"></p>
+              <div id="response" class="text-center">
+                <!--This will hold our error messages and the response from the server. -->
+              </div>
+              <!-- Row -->
+              <div class="row wow fadeInDown" data-wow-offset="50" data-wow-duration="0.3s" data-wow-delay="0.1s">
+                <div class="col col-md-5 col-sm-5">
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                    <label class="control-label" for="location">Location:</label>
+                    <input class="form-control" id="location" type="text" value="Address" ng-model="conf.location" placeholder="location" ng-keypress="MostrarBoton()">
+                  </div>
+
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                    <label class="control-label" for="opening hours">Opening Hours:</label>
+                    <input class="form-control" id="opening hours" type="text"  ng-model="conf.opening[0].dias" placeholder="monday-friday" ng-keypress="MostrarBoton()">
+                  </div>
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                    <label class="control-label" for="hours">Hours:</label>
+                    <input class="form-control" id="hours" type="text"  ng-model="conf.opening[0].horas" placeholder="hours" ng-keypress="MostrarBoton()">
+                  </div>
+
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                    <label class="control-label" for="opening hours">Opening Hours:</label>
+                    <input class="form-control" type="opening hours"  ng-model="conf.opening[1].dias" placeholder="saturday-sunday" ng-keypress="MostrarBoton()">
+                  </div>
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.firstname.$error.required">First Name is required.</span>
+                    <label class="control-label" for="hours">Hours:</label>
+                    <input class="text-box-dark" id="hours" type="text"  ng-model="conf.opening[1].horas" placeholder="hours" ng-keypress="MostrarBoton()">
+                  </div>
+                </div>
+                <div class="col col-md-7 col-sm-7">
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.email.$error.required">Email is required.</span>
+                    <span ng-show="!reservation.$pristine && reservation.email.$error.email">Please enter a valid email.</span>
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" value="Email" ng-model="conf.email" placeholder="email" ng-keypress="MostrarBoton()">
+                  </div>
+
+                  <div class="form-group">
+                    <span ng-show="!reservation.$pristine && reservation.phone.$error.required">Phone is required.</span>
+                    <span ng-show="!reservation.$pristine && reservation.phone.$error.number">Please enter a valid phone.</span>
+                    <label class="control-label" for="phone">Phone:</label>
+                    <input class="form-control" type="text" id="phone" value="phone" ng-model="conf.phone" placeholder="phone" ng-keypress="MostrarBoton()">
+                  </div>
+
+                  <p><label>Coments:</label>
+                    <textarea rows="17" placeholder="Coments" name="suggestions" id="suggestions" ng-model="conf.comentario"></textarea></p>
+
+                  <p class="hidden-xs"><button id="submit" name="submit" type="submit" class="btn btn-1 btn-1e" ng-click="Update()" ng-disabled="!reservation.$valid">Update</button></p>
+                  <div class="alert alert-success" ng-show="message">
+                    <button type="button" class="close" data-dismiss="alert" ng-click="CloseMessage()">&times;</button>
+                    <h4>Success!</h4>
+                    Configuration updated!!!
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- Row Ends -->
+            </form>
+            <!-- Reservation Form Ends -->
+          </div>
+          <!-- Form Reservation Section Ends -->
+        </div>
+        <!-- Container -->
+      </section>
+      <!-- Section Reservation Ends -->
+    </div>  <div ng-include="'Components/footer/footer.html'"></div>
+
+  </div>
+  <!-- Main Ends -->
+</div>
+<!-- Wrapper Ends -->
+
+<script type="text/javascript">
+  $(function(){
+    "use strict";
+    $(document).ready(function(){
+      //Simpel date time picker
+      $('*[name=datetimepick]').appendDtpicker({
+        "autodateOnStart": false,
+        "futureOnly": true,
+        "closeOnSelected": true,
+      });
+
+    });
+    var wow = new WOW(
+      {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+    )
+    wow.init();
+  });
+</script>
+
+
+<!--<div class="col-md-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Configure su Sitio</h3>
+    </div>
+    <div class="panel-body">
+      <div id="shieldui-chart1">
+      <div class="payment-online-form-left">
+        <form>
+          <ul class="list-unstyled">
+            <li><input class="text-box-dark" type="text" value="Frist Name" ng-model="conf.titulo" placeholder="Titulo" ng-keypress="MostrarBoton()"></li>
+            <li><input class="text-box-dark" type="text" value="Last Name" ng-model="conf.comentario" placeholder="Comentario" ng-keypress="MostrarBoton()"></li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><input class="text-box-dark" type="text" value="Email" ng-model="conf.carrito" placeholder="Titulo carrito" ng-keypress="MostrarBoton()"></li>
+            <li><input class="text-box-dark" type="file" value="Company Name" ng-model="conf.logo" placeholder="Logo" ng-keypress="MostrarBoton()"></li>
+          </ul>
+          <div class="clearfix"></div>
+          <ul class="payment-sendbtns">
+            <li><input type="submit" value="Actualizar" ng-click="Update()" ng-show="visible"></li>
+          </ul>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+<p></br></p>
+      <div id="shieldui-chart2">
+        <div class="payment-online-form-left">
+          <form>
+            <ul class="list-unstyled">
+              <li><input class="text-box-dark" type="text" value="Frist Name" ng-model="conf.titulo" placeholder="Titulo" ng-keypress="MostrarBoton()"></li>
+              <li><input class="text-box-dark" type="text" value="Last Name" ng-model="conf.comentario" placeholder="Comentario" ng-keypress="MostrarBoton()"></li>
+            </ul>
+            <ul class="list-unstyled">
+              <li><input class="text-box-dark" type="text" value="Email" ng-model="conf.carrito" placeholder="Titulo carrito" ng-keypress="MostrarBoton()"></li>
+              <li><input class="text-box-dark" type="file" value="Company Name" ng-model="conf.logo" placeholder="Logo" ng-keypress="MostrarBoton()"></li>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="payment-sendbtns">
+              <li><input type="submit" value="Actualizar" ng-click="Update()" ng-show="visible"></li>
+            </ul>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->

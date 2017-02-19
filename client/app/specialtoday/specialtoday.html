@@ -1,0 +1,41 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'" xmlns="http://www.w3.org/1999/html"></div>
+<p></br></br></br></br></br></p>
+<!-- Section Chalkboard Menu -->
+
+<div style="background-image: url('../../assets/images/breackf.jpg')">
+<section class="page-sub-title dec-border chalkbmenu parallax-window" data-parallax="scroll" data-image-src="../../assets/images/breackf.jpg">
+
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row">
+      <!-- ChalkBoard Menu -->
+      <div class="col col-md-12">
+        <img class="border img-1" src="../../assets/images/garlic.png" alt="Garlic" />
+        <h3 class="page-subtitle">Discover</h3>
+        <h2 class="page-title">Specials Today</h2>
+        <div class="menu-section">
+          <div class="row">
+            <div ng-repeat="special in specials">
+              <div class="col col-md-11 col-sm-11 col-xs-12 wow fadeInLeft" data-wow-offset="30" data-wow-duration="0.3s" data-wow-delay="0.1s">
+                <h4 class="menu-heading">{{special.name}}</h4>
+              </div>
+              <div class="col col-md-1 col-sm-1 col-xs-12 text-right wow fadeInRight" data-wow-offset="30" data-wow-duration="0.3s" data-wow-delay="0.2s">
+                <h4>{{special.precio | currency}}</h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <img class="border img-2" src="../../assets/images/mint-leaves.png" alt="Mint Leaves" />
+      </div>
+      <!-- Chalkboard Menu Ends -->
+      <div class="clearfix"></div>
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>
+
+</div>
+<!-- Section Chalkboard Menu Ends -->

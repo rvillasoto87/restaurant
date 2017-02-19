@@ -1,0 +1,46 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="cancel()" data-dismiss = "modal" aria-hidden="true">&times;</button>
+  <h4>Update Menú</h4>
+</div>
+<div class="modal-body">
+  <div class="payment-online-form-left">
+    <!--name="cart" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="formPaypal"-->
+    <form>
+      <ul class="list-unstyled">
+        <li><input class="text-box-dark" type="text" ng-model="ident" placeholder="Categoría" ng-keypress="MostrarBoton()"></li>
+      </ul>
+      <div class="clearfix"></div>
+      <body>
+      <div class="container" style="background-color:#DCEAF4; width: 100%">
+        <ul class="list-unstyled">
+          <li><input class="text-box-dark" type="text" ng-model="nombre" placeholder="nombre" ng-keypress="MostrarBoton()"></li>
+        </ul>
+        <div class="clearfix"></div>
+        <ul class="list-unstyled">
+          <li><input class="text-box-dark" type="number" ng-model="precio" placeholder="precio" ng-click="MostrarBoton()" ng-keypress="MostrarBoton()"></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li><div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+                   accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
+                   ngf-resize="{width: 400, height: 400}">Select</div>
+            <button type="submit" ng-click="submit()">submit</button>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+        <textarea rows="4" placeholder="descripción" ng-model="descripcion"></textarea>
+        <ul class="pager">
+          <li><a ng-click="Previous()" href="#">Previous</a></li>
+          <li><a ng-click="Next()" href="#">Next</a></li>
+          <li><a ng-click="MostrarBoton()" href="#" ng-really-do="DeleteArray()"  ng-really-message="Are you sure you want to delete? ">Delete</a></li>
+        </ul>
+      </div>
+      </body>
+      <ul class="payment-sendbtns">
+        <li><input type="reset" value="Cancel" ng-click="cancel()"></li>
+        <li><input type="submit" value="Process order" ng-click="updateCategoria()" ng-show="visible"></li>
+      </ul>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+  <div class="payment-online-form-left"></div>
+</div>

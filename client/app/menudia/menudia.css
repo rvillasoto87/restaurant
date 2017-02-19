@@ -1,0 +1,13 @@
+/*.ng-valid{
+  border: thin solid #090;
+}
+.ng-valid{
+  border: thin solid #fdfffb;
+}
+.ng-invalid{
+  border: thin solid #990000;
+}
+
+.tamano{
+  width: 15%;
+}*/

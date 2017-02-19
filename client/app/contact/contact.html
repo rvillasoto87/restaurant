@@ -1,0 +1,135 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+
+<!-- Main -->
+<div id="maini">
+<div id="main" class="no_rel">
+  <!-- Heading Section  -->
+
+  <!-- Contact Us Section -->
+  <section id="contact-us">
+    <!-- Container -->
+    <div class="container">
+      <!-- Row -->
+      <div class="row">
+        <!-- Column Address Details -->
+        <div class="col col-md-4 col-sm-4 details">
+          <div class="wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">
+            <h4>OPENING HOURS</h4>
+            <p style="color: darkslategray">{{config.opening[0].dias}}<br />{{config.opening[0].horas}}</p>
+            <p style="color: darkslategray">{{config.opening[1].dias}}<br />{{config.opening[1].horas}}</p>
+          </div>
+          <p>&nbsp;</p>
+          <div class="wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+            <h4>LOCATION</h4>
+            <p style="color: darkslategray">{{config.location}}</p>
+            <p style="color: darkslategray">{{config.phone}}<br />{{config.email}}</p>
+          </div>
+        </div>
+        <!-- Column Address Details Ends -->
+
+        <!-- Column Contact Form -->
+        <div class="col col-md-8 col-sm-8 wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+          <div class="contact-form">
+            <h5>WRITE US, WE COME BACK TO YOU AS SOON AS POSSIBLE</h5>
+            <form id="cont_form" name="contact" ng-submit="Submit()"  enctype="multipart/form-data" method="post">
+              <div id="response">
+                <!--This will hold our error messages and the response from the server. -->
+              </div>
+              <div class="row">
+                <div class="col col-md-6 col-sm-6 col-xs-6">
+                  <p class="t-field">
+                    <span ng-show="!contact.$pristine && contact.name.$error.required">First Name is required.</span>
+                    <label>First Name:</label>
+                    <input id="name" type="text" name="name" placeholder="Your Name" ng-model="contact.name" ng-required="!contact.$pristine"/>
+                  </p>
+                </div>
+                <div class="col col-md-6 col-sm-6 col-xs-6">
+                  <p class="t-field">
+                    <label>E-Mail: </label>
+                    <span ng-show="!contact.$pristine && contact.email.$error.required">Email is required.</span>
+                    <span ng-show="!contact.$pristine && contact.email.$error.email">Please enter a valid email.</span>
+                    <input type="email" id="email" name="email" placeholder="Your E-Mail" ng-model="contact.email" ng-required="!contact.$pristine"/>
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col col-md-12 col-sm-12">
+                  <p class="t-area">
+                    <label>Suggestion</label>
+                    <span ng-show="!contact.$pristine && contact.message.$error.required">Your Message is required.</span>
+                    <textarea rows="5" id="suggestions" name="message" placeholder="Your Message" ng-model="contact.message" ng-required="!contact.$pristine"></textarea>
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col col-md-12">
+                  <p class="b-submit">
+                    <button id="submit" name="submit" type="submit" class="btn btn-1 btn-1e" ng-disabled="!contact.$valid"> Submit your suggestions </button>
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Column Contact Form Ends -->
+        <div class="clearfix"></div>
+      </div>
+      <!-- Row Ends -->
+    </div>
+    <!-- Container Ends -->
+  </section>
+  <!-- Contact Us Section -->
+  <div ng-include="'Components/footer/footer.html'"></div>
+
+</div>
+<!-- Main Ends -->
+
+</div>
+<!--<div class="content"style="background-image: url('../assets/images/content.png')">
+<section id="contact-page" class="container">
+  <div class="row-fluid">
+
+    <div class="span8">
+      <h2>Contact Form</h2><p></br></p>
+      <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+        <div class="row-fluid">
+          <div class="span5">
+            <label>First Name</label>
+            <input type="text" class="input-block-level" required="required" placeholder="Your First Name">
+            <label>Last Name</label>
+            <input type="text" class="input-block-level" required="required" placeholder="Your Last Name">
+            <label>Email Address</label>
+            <input type="text" class="input-block-level" required="required" placeholder="Your email address">
+          </div>
+          <div class="span7">
+            <label>Message</label>
+            <textarea name="message" id="message" required="required" class="input-block-level" rows="8"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-large pull-right">Send Message</button>
+        <p> </p>
+      </form>
+    </div>
+
+    <div class="span3">
+      <h4>Our Address</h4>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <p>
+        <i class="icon-map-marker pull-left"></i> 1209 Willow Oaks Lane, New York<br>
+        Lafayette, 1212,  United States
+      </p>
+      <p>
+        <i class="icon-envelope"></i> &nbsp;email@example.com
+      </p>
+      <p>
+        <i class="icon-phone"></i> &nbsp;+123 45 67 89
+      </p>
+      <p>
+        <i class="icon-globe"></i> &nbsp;http://www.shapebootstrap.net
+      </p>
+    </div>
+
+  </div>
+
+</section>
+</div>-->
+

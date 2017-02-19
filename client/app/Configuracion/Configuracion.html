@@ -1,0 +1,355 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+<p></br></br></br></p>
+<p></br></p>
+<div class="pricing-plans">
+  <div id="page-wrapper">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Configure su Sitio</h3>
+          </div>
+          <div class="panel-body">
+            <div id="shieldui-chart1">
+              <div class="payment-online-form-left">
+                <div class="alert alert-success" ng-show="message">
+                  <button type="button" class="close" data-dismiss="alert" ng-click="CloseMessage()">&times;</button>
+                  <h4>Success!</h4>
+                  Configuration updated!!!
+                </div>
+                <form>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="text" value="Titulo" ng-model="conf.titulo" placeholder="Titulo" ng-keypress="MostrarBoton()"></li>
+                  <li><input class="text-box-dark" type="text" value="Address" ng-model="conf.location" placeholder="location" ng-keypress="MostrarBoton()"></li>
+                  <!--<li><input class="text-box-dark" type="text" value="Last Name" ng-model="conf.comentario" placeholder="Comentario" ng-keypress="MostrarBoton()"></li>-->
+                  <!--<li><input class="text-box-dark" type="file" value="Company Name" ng-model="conf.logo" placeholder="Logo" ng-keypress="MostrarBoton()"></li>-->
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="email" value="Email" ng-model="conf.email" placeholder="email" ng-keypress="MostrarBoton()"></li>
+                  <li><input class="text-box-dark" type="text" value="phone" ng-model="conf.phone" placeholder="phone" ng-keypress="MostrarBoton()"></li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="text"  ng-model="conf.opening[0].dias" placeholder="lunes-viernes" ng-keypress="MostrarBoton()"></li>
+                  <li><input class="text-box-dark" type="text"  ng-model="conf.opening[0].horas" placeholder="horario" ng-keypress="MostrarBoton()"></li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><input class="text-box-dark" type="text"  ng-model="conf.opening[1].dias" placeholder="sabado-domingo" ng-keypress="MostrarBoton()"></li>
+                  <li><input class="text-box-dark" type="text"  ng-model="conf.opening[1].horas" placeholder="horario" ng-keypress="MostrarBoton()"></li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li><textarea name="comentario" ng-model="conf.comentario" placeholder="Comentario" ng-keypress="MostrarBoton()"></textarea></li>
+                </ul>
+                <div class="clearfix"></div>
+                <ul class="payment-sendbtns">
+                  <li><input type="submit" value="Actualizar" ng-click="Update()" ng-show="visible"></li>
+                </ul>
+                <div class="clearfix"></div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- <div class="col-md-6">
+      <h1 class="page-header">Menú de la Semana:</h1>
+      <div  ng-show="viewform" class="wrapper">
+        <input type="text" class="form-control" placeholder="nombre." ng-model="alumno.nombre">
+        <input type="text" class="form-control" placeholder="teléfono." ng-model="alumno.telefono">
+        <input type="text" class="form-control" placeholder="curso." ng-model="alumno.curso">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="add()">Add New</button>
+      </span>
+      </div>
+      &lt;!&ndash;<center><button type="submit" class="btn btn-primary" ng-click="addForm()" ng-hide="viewform">Add Contact</button></center>&ndash;&gt;
+      <div class="wrapper">
+        <div class="contact-item" ng-repeat="menudia in semana">
+          <div class="nombre" style="color: #080808"> <h3>{{menudia.dia}}<a href="#" style="color: #080808"><span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(menudia)"></span></a></h3></div>
+          <div class="col item col-md-6 col-sm-6 wow fadeInDown" ng-repeat="cate in menudia.categorias">
+            <h4 style="color: #080808">{{cate.ident}}</h4></strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+            <div class="col-menu" ng-repeat="menu in cate.menu">
+              <div class="col col-md-9 col-sm-9 col-xs-9">
+                <h5 class="item-heading" style="color: #080808">{{menu.name}}</h5>
+                <p style="color: #080808">{{menu.descripcion}}</p>
+              </div>
+              <div class="col col-md-3 col-sm-3 col-xs-3">
+                <h4 class="item-price">{{menu.precio | currency}}</h4>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>-->
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Uploads Imagens</h3>
+          </div>
+          <div class="panel-body">
+            <div id="shieldui-chart1">
+              <div class="payment-online-form-left">
+                <div class="alert alert-success" ng-show="message">
+                  <button type="button" class="close" data-dismiss="alert" ng-click="CloseMessage()">&times;</button>
+                  <h4>Success!</h4>
+                  Configuration updated!!!
+                </div>
+                <form>
+                  <ul class="list-unstyled">
+                    <li><input class="text-box-dark" type="text" value="Titulo" ng-model="conf.titulo" placeholder="Titulo" ng-keypress="MostrarBoton()"></li>
+                    <li><input class="text-box-dark" type="text" value="Address" ng-model="conf.location" placeholder="location" ng-keypress="MostrarBoton()"></li>
+                  </ul>
+                  <div class="clearfix"></div>
+                  <ul class="payment-sendbtns">
+                    <li><input type="submit" value="Actualizar" ng-click="Update()" ng-show="visible"></li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="tab-header">{{conf.titulo}}</h5>
+          </div>
+          <div class="panel-body">
+            <!--<div ng-repeat="menudia in semana">-->
+                <div class="body tab-content">
+                        <!--<div ng-repeat="cate in menudia.categorias">-->
+                  <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle  btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                          {{semana[0].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[0])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[0].categorias">
+                            <address ng-mouseenter="setId(semana[0]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                          {{organizado(semanaorg[1])+" "}}{{semana[1].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[1])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[1].categorias">
+                            <address ng-mouseenter="setId(semana[1]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseTres">
+                          {{semana[2].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[2])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseTres" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[2].categorias">
+                            <address ng-mouseenter="setId(semana[2]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                          {{semana[3].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[3])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseFour" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[3].categorias">
+                            <address ng-mouseenter="setId(semana[3]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                          {{semana[4].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[4])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseFive" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[4].categorias">
+                            <address ng-mouseenter="setId(semana[4]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                          {{semana[5].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[5])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseSix" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[5].categorias">
+                            <address ng-mouseenter="setId(semana[5]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle btn btn-large btn-block btn-primary" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+                          {{semana[6].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[6])"></span>
+                        </a>
+                      </div>
+                      <div id="collapseSeven" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                          <div ng-repeat="cate in semana[6].categorias">
+                            <address ng-mouseenter="setId(semana[6]._id)">
+                              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                              <div ng-repeat="food in cate.menu">
+                                <p class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                              </div><br>
+                            </address>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!--</div>-->
+            <!--</div>-->
+          </div>
+        </div>
+      </div>
+
+
+   <!-- <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Sources One month tracking </h3>
+          </div>
+          <div class="panel-body">
+            <div id="shieldui-grid1"></div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!--<div class="row">
+      <div class="col-lg-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Logins per week</h3>
+          </div>
+          <div class="panel-body">
+            <div id="shieldui-chart2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-magnet"></i> Server Overview</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="server-stats">
+              <li>
+                <div class="key pull-right">CPU</div>
+                <div class="stat">
+                  <div class="info">60% / 37°C / 3.3 Ghz</div>
+                  <div class="progress progress-small">
+                    <div style="width: 70%;" class="progress-bar progress-bar-danger"></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="key pull-right">Mem</div>
+                <div class="stat">
+                  <div class="info">29% / 4GB (16 GB)</div>
+                  <div class="progress progress-small">
+                    <div style="width: 29%;" class="progress-bar"></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="key pull-right">LAN</div>
+                <div class="stat">
+                  <div class="info">6 Mb/s <i class="fa fa-caret-down"></i>&nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></div>
+                  <div class="progress progress-small">
+                    <div style="width: 48%;" class="progress-bar progress-bar-inverse"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-4">
+        <header>
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a data-toggle="tab" href="#stats">Users</a>
+            </li>
+            <li class="">
+              <a data-toggle="tab" href="#report">Favorites</a>
+            </li>
+            <li class="">
+              <a data-toggle="tab" href="#dropdown1">Commenters</a>
+            </li>
+          </ul>
+        </header>
+
+
+      </div>
+    </div>-->
+  </div>
+
+</div>
+  </div>
+</div>

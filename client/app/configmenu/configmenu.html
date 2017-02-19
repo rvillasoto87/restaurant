@@ -1,0 +1,123 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+</br></br></br></br>
+<!-- /.col-lg-6 -->
+<div class="container-panel">
+<div class="col-lg-9">
+  <div class="panel panel-warning">
+    <div class="panel-heading" style="color: #000000"><strong>Configuration Week Menu</strong></div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#Monday-pills" data-toggle="tab">{{semana[0].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[0])"></span></a></li>
+        <li><a href="#Tuesday-pills" data-toggle="tab">{{semana[1].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[1])"></span></a></li>
+        <li><a href="#Wednesday-pills" data-toggle="tab">{{semana[2].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[2])"></span></a></li>
+        <li><a href="#Thursday-pills" data-toggle="tab">{{semana[3].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[3])"></span></a></li>
+        <li><a href="#Friday-pills" data-toggle="tab">{{semana[4].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[4])"></span></a></li>
+        <li><a href="#Saturday-pills" data-toggle="tab">{{semana[5].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[5])"></span></a></li>
+        <li><a href="#Sunday-pills" data-toggle="tab">{{semana[6].dia+" "}}<span class="glyphicon glyphicon-plus" ng-click="NewCategoriaModal(semana[6])"></span></a></li>
+
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="Monday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[0].categorias">
+              <address ng-mouseenter="setId(semana[0]._id)">
+              <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+              {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+              <div ng-repeat="food in cate.menu">
+                <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+              </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Tuesday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[1].categorias">
+              <address ng-mouseenter="setId(semana[1]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Wednesday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[2].categorias">
+              <address ng-mouseenter="setId(semana[2]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Thursday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[3].categorias">
+              <address ng-mouseenter="setId(semana[3]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Friday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[4].categorias">
+              <address ng-mouseenter="setId(semana[4]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Saturday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[5].categorias">
+              <address ng-mouseenter="setId(semana[5]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div><br>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="Sunday-pills"><p></br></p>
+          <div class="row menu-items">
+            <div style="color: #000000" class="col item col-md-3 col-sm-3 wow fadeInDown" ng-repeat="cate in semana[6].categorias">
+              <address ng-mouseenter="setId(semana[6]._id)">
+                <strong>{{cate.ident}}:</strong><a href="#" ng-click="editMenu(cate)"><div class="glyphicon glyphicon-pencil"></div></a>{{" "}}<a href="#" ng-click="NewMenuModal(cate)"><span class="glyphicon glyphicon-plus"></span></a>
+                {{" "}}<a href="#" ng-really-do="Delete(cate)"  ng-really-message="Are you sure you want to delete? "><span class="glyphicon glyphicon-minus"></span></a>
+                <div ng-repeat="food in cate.menu">
+                  <p style="color: #000000" class="glyphicon glyphicon-asterisk">{{food.name}}{{"  "}}{{food.precio | currency}}<br>{{food.descripcion}}</p>
+                </div>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.panel-body -->
+  </div>
+  <!-- /.panel -->
+</div>
+</div>
+
+<!-- /.col-lg-6 -->

@@ -1,0 +1,37 @@
+<!-----pop-up-grid---->
+<div class="modal-body">
+      <div class="payment-online-form-left">
+        <!--name="cart" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="formPaypal"-->
+        <form name="cart" ng-submit="addPay()" method="post" id="formPaypal" novalidate>
+          <h4><span class="shipping"> </span>Shipping</h4>
+          <ul class="list-unstyled">
+            <li><input class="text-box-dark" type="text" value="Frist Name" ng-model="pay.firstname" placeholder="Frist Name" required class="ng-dirty ng-invalid"></li>
+            <li><input class="text-box-dark" type="text" value="Last Name" ng-model="pay.lastname" placeholder="Last Name" required></li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><input class="text-box-dark" type="email" value="Email" ng-model="pay.email" placeholder="Email" required></li>
+            <li><input class="text-box-dark" type="text" value="Company Name" ng-model="pay.company" placeholder="Company Name"></li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><input class="text-box-dark" type="number" value="Phone" ng-model="pay.phone" placeholder="Phone" required></li>
+            <li><input class="text-box-dark" type="text" value="Address" ng-model="pay.addresss" placeholder="Address" required></li>
+            <div class="clearfix"></div>
+          </ul>
+          <div class="clearfix"></div>
+          <ul class="list-unstyled">
+            <li>
+              <span class="col_checkbox">
+                <label for="4" name="demo_lbl_2" class="css-label2"><h4>Payments</h4></label>
+                <a class="paypal" href="#"> </a>
+              </span>
+            </li>
+          </ul>
+          <ul class="payment-sendbtns">
+            <li><input type="reset" value="Cancel" ng-click="cancel()"></li>
+            <li><input type="submit" value="Process order" ng-show="cart.$valid"></li>
+          </ul>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+</div>
+<!-----pop-up-grid---->

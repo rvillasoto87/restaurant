@@ -1,0 +1,237 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'" xmlns="http://www.w3.org/1999/html"></div>
+
+<!-- Heading Section  -->
+<div style="background-image: url('../assets/images/menu_bg.jpg')">
+<section id="page-main-section" class="parallax-window page-main" data-parallax="scroll" data-image-src="images/menu_bg.jpg">
+  <div class="container">
+    <h3 class="page-subtitle">Discover</h3>
+    <h1 class="page-title">Fresh Menu</h1>
+  </div>
+</section>
+</div>
+
+<!-- Heading Section Ends  -->
+<!-- Divider 1 -->
+<div class="divider1"></div>
+<!-- Divider 1 Ends -->
+
+<h4 class="tag"><button type="button" class="btn btn-warning" ng-show="mostrar()" data-toggle="modal" ng-click="ShowModal()">Shipping</button></h4>
+
+<div id="main">
+<!-- Menu Section 1 -->
+<section id="menu-1" class="menu-items">
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row">
+      <!-- Menu Items -->
+      <div class="col col-md-6 col-sm-6 wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[0].ident}}</h2>
+        </div>
+        <!-- Menu Title End -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[0].menu">
+            <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+              <p class="main-item-title">{{item.name}}</p>
+              <p class="sub">{{item.descripcion}}</p>
+              <input placeholder="cant"  class = "tamano" type="number" ng-model="item.cant" ng-show="item.seleccionado">
+            </div>
+            <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+              <p>{{item.precio | currency}}</p>
+              <label class="checkbox inline">
+                <input type="checkbox" ng-model="item.seleccionado" ng-click="comprar()"> Pay
+              </label>
+            </div>
+            <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Menu Item Ends -->
+
+      <div class="col col-md-6 col-sm-6 wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[1].ident}}</h2>
+        </div>
+        <!-- Menu Title Ends -->
+
+        <!-- Menu List -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[1].menu">
+              <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+                <p class="main-item-title">{{item.name}}</p>
+                <p class="sub">{{item.descripcion}}</p>
+                <input placeholder="cant"  class = "tamano" type="number" ng-model="item.cant" ng-show="item.seleccionado">
+              </div>
+              <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+                <p>{{item.precio | currency}}</p>
+                <label class="checkbox inline">
+                  <input type="checkbox" ng-model="item.seleccionado" ng-click="comprar()"> Pay
+                </label>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu List Ends -->
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>
+<!-- Section Menu 1 Ends -->
+
+<!-- Section Menu - -->
+<section  id="menu-2" class="menu-items">
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row">
+      <!-- Menu Items -->
+      <div ng-show="ShowCate(menudia.categorias[2])">
+      <div class="col col-md-6 col-sm-6 wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[2].ident}}</h2>
+        </div>
+        <!-- Menu Title End -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[2].menu">
+              <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+                <p class="main-item-title">{{item.name}}</p>
+                <p class="sub">{{item.descripcion}}</p>
+                <input placeholder="cant"  class = "tamano" type="number" ng-model="item.cant" ng-show="item.seleccionado">
+              </div>
+              <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+                <p>{{item.precio | currency}}</p>
+                <label class="checkbox inline">
+                  <input type="checkbox" ng-model="item.seleccionado" ng-click="comprar()"> Pay
+                </label>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Menu Item Ends -->
+      <div ng-show="ShowCate(menudia.categorias[3])">
+      <div class="col col-md-6 col-sm-6 wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[3].ident}}</h2>
+        </div>
+        <!-- Menu Title Ends -->
+
+        <!-- Menu List -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[3].menu">
+              <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+                <p class="main-item-title">{{item.name}}</p>
+                <p class="sub">{{item.descripcion}}</p>
+                <input placeholder="cant"  class = "tamano" type="number" ng-model="item.cant" ng-show="item.seleccionado">
+              </div>
+              <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+                <p>{{item.precio | currency}}</p>
+                <label class="checkbox inline">
+                  <input type="checkbox" ng-model="item.seleccionado" ng-click="comprar()"> Pay
+                </label>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu List Ends -->
+
+      </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>
+<!-- Section Menu 2 Ends -->
+
+<!-- Menu Section 1 -->
+<section id="menu-3" class="menu-items">
+  <!-- Container -->
+  <div class="container">
+    <!-- Row -->
+    <div class="row">
+      <!-- Menu Items -->
+      <div ng-show="ShowCate(menudia.categorias[4])">
+      <div class="col col-md-6 col-sm-6 wow fadeInLeft" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.1s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[4].ident}}</h2>
+        </div>
+        <!-- Menu Title End -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[4].menu">
+              <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+                <p class="main-item-title">{{item.name}}</p>
+                <p class="sub">{{item.descripcion}}</p>
+              </div>
+              <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+                <p>{{item.precio | currency}}</p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Menu Item Ends -->
+      </div>
+      <div ng-show="ShowCate(menudia.categorias[5])">
+      <div class="col col-md-6 col-sm-6 wow fadeInRight" data-wow-offset="50" data-wow-duration="0.5s" data-wow-delay="0.6s">
+        <!-- Menu Titles -->
+        <div class="menu-title">
+          <h2>{{menudia.categorias[5].ident}}</h2>
+        </div>
+        <!-- Menu Title Ends -->
+
+        <!-- Menu List -->
+        <div class="menu-list">
+          <div class="row">
+            <div ng-repeat="item in menudia.categorias[5].menu">
+              <div class="col col-md-10 col-sm-10 col-xs-9 menu-item-name">
+                <p class="main-item-title">{{item.name}}</p>
+                <p class="sub">{{item.descripcion}}</p>
+              </div>
+              <div class="col col-md-2 col-sm-2 col-xs-3 menu-item-price">
+                <p>{{item.precio | currency}}</p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu List Ends -->
+
+      </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- Row Ends -->
+  </div>
+  <!-- Container Ends -->
+</section>
+<!-- Section Menu 1 Ends -->
+
+<div ng-include="'Components/footer/footer.html'"></div>
+</div>
+
+
+

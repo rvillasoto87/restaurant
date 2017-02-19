@@ -1,0 +1,38 @@
+<div ng-include="'Components/navbar/navbarplantilla.html'"></div>
+</br></br></br></br></br>
+
+
+<div class="container">
+<div class="bs-example"><h3 align="center"><strong>Solicited Reservations</strong></h3>
+  <!-- Divider 1 -->
+  <div class="divider1"></div>
+  <!-- Divider 1 Ends -->
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>People Amount</th>
+      <th>Suggestion</th>
+      <th>Date Time</th>
+    </tr>
+    </thead>
+    <tbody infinite-scroll="more()" infinite-scroll-distance="2">
+    <tr ng-repeat=" res in reserv">
+      <td>{{res.firstname}}</td>
+      <td>{{res.lastname}}</td>
+      <td>{{res.email}}</td>
+      <td>{{res.phone}}</td>
+      <td>{{res.peopleamount}}</td>
+      <td>{{res.sugerencia}}</td>
+      <td>{{res.date}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div>
+
